@@ -1,0 +1,29 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+}
+
+.top {
+    width: 100%;
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 5px;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.space {
+    height: 10px;
+}
