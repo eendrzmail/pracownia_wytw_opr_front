@@ -17,7 +17,7 @@ const WeatherData = ({
             <div className={styles.wrapper}>
                 <CurrentWeather data={data.current} />
 
-                {data.forecast.forecastday.map(day => (
+                {(data.forecast?.forecastday || []).map(day => (
                     <DayWeather data={day} key={day.date} />
                 ))}
             </div>
