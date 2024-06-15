@@ -1,5 +1,4 @@
 import { IWeather } from '@/types/Weather'
-import React from 'react'
 import CurrentWeather from './components/CurrentWeather/CurrentWeather'
 import DayWeather from './components/DayWeather/DayWeather'
 import styles from './WeatherData.module.css'
@@ -15,7 +14,9 @@ const WeatherData = ({
     <>
         {!!data && (
             <div className={styles.wrapper}>
-                <CurrentWeather data={data.current} />
+                {data.current && (
+                    <CurrentWeather data={data.current} />
+                )}
 
                 {(data.forecast?.forecastday || []).map(day => (
                     <DayWeather data={day} key={day.date} />

@@ -10,7 +10,6 @@ import {
     QueryClient,
     QueryClientProvider,
 } from '@tanstack/react-query';
-import LandingPage from '@/pages/LandingPage/LandingPage';
 import styles from './App.module.css';
 import WeatherPage from '@/pages/WeatherPage/WeatherPage';
 import HistoryPage from '@/pages/HistoryPage/HistoryPage';
@@ -24,7 +23,7 @@ function App() {
                 <BrowserRouter basename={'/pracownia/'}>
                     <Routes>
                         <Route
-                            element={<LandingPage />}
+                            element={<WeatherPage />}
                             index
                         />
 
