@@ -13,14 +13,14 @@ export abstract class HttpClient {
 
     public static getFutureWeather = (city: string, date:string) => {
         return axiosInstance
-            .get<IWeather>(`GetCurrentWeather/${city}/${date}`)
+            .get<IWeather>(`GetFutureWeather/${city}/${date}`)
             .then(response => response.data);
         return Promise.resolve(mock)
     };
 
     public static getForecast = (city: string, days: string | number) => {
         return axiosInstance
-            .get<IWeather>(`GetCurrentWeather/${city}/${days}`)
+            .get<IWeather>(`GetForecast/${city}/${days}`)
             .then(response => response.data);
         return Promise.resolve(mock)
     };

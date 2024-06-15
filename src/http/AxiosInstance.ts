@@ -9,7 +9,7 @@ const axiosInstance: AxiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(
     (config: InternalAxiosRequestConfig): InternalAxiosRequestConfig => {
-        config.headers.Apikey = 'test'
+        config.headers.ApiKey = 'test'
 
         return config;
     },
